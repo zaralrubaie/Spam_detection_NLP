@@ -1,13 +1,11 @@
 # Spam Detection using NLP 📩🤖
 
-This project builds a model to classify messages as **"spam"** or **"ham"** (non-spam) using **Natural Language Processing (NLP)**.  
-The goal is to automatically detect spam messages, which is useful for **email systems, text messaging services, and other communication platforms**.
+This project builds a model to classify messages as spam or ham (non-spam) using Natural Language Processing (NLP).
+The goal is to automatically detect unwanted messages, which is useful for email systems, messaging apps, and other communication platforms.
 
----
+##🔹 Model Performance
 
-## 🔹 Model Evaluation
-
-The model was evaluated on a test set, and the performance metrics are summarized below:
+The model was evaluated on a test set, and the main results are summarized below:
 
 | Class / Metric   | Precision | Recall | F1-Score | Support |
 |-----------------|-----------|--------|----------|---------|
@@ -16,37 +14,31 @@ The model was evaluated on a test set, and the performance metrics are summarize
 | **Accuracy**    | -         | -      | 0.98     | 1115    |
 | **Macro Avg**   | 0.97      | 0.94   | 0.96     | 1115    |
 | **Weighted Avg**| 0.98      | 0.98   | 0.98     | 1115    |
+- Interpretation: The model is very accurate at identifying both spam and ham messages, with slightly lower recall for spam.
+---
+
+## 🔹 What the Metrics Mean
+- Accuracy: Percentage of all messages that were classified correctly.
+- Precision: Of all messages predicted as spam, how many were actually spam.
+- Recall: Of all actual spam messages, how many did the model correctly identify.
+- F1-Score: A balance between precision and recall, giving a single performance score.
+
+- These metrics show how well the model can separate spam from legitimate messages, while minimizing false positives (ham marked as spam) and false negatives (spam missed).
 
 ---
 
-## 🔹 Evaluation Metrics Explained
-
-- **Accuracy**: The percentage of correct predictions out of all predictions.  
-
-- **Precision**: Measures how many of the predicted spam messages were actually spam.  
-
-\[
- \text{Precision} = \frac{\text{True Positives}}{\text{True Positives + False Positives}}
-\]
-
-- **Recall (Sensitivity)**: Measures how many actual spam messages were correctly identified by the model.  
-
-\[
-  \text{Recall} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}
-\]
-
-- **F1-Score**: Harmonic mean of precision and recall, balancing the two metrics.  
-
-\[
-  F1\text{-}score = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision + Recall}}
-\]
-
-> These metrics help evaluate the model's ability to correctly classify spam and ham messages, balancing both **false positives** and **false negatives**.
-
+## 🔹 Key Takeaways
+- The model performs very well for real-world spam detection.
+- Confusion matrix can be used to visualize the predictions.
+- Demonstrates the practical application of NLP in text classification tasks.
 ---
-
-## 🔹 Notes
-
-- The **classification report** provides a summary of these metrics.  
-- The **confusion matrix** helps visualize performance across different classes (spam vs ham).  
-- This project demonstrates the practical application of NLP for **text classification** tasks.
+## 🔹 Project Structure
+````
+spam-detection-nlp/
+│
+├── spam_detector_model.py     # Python script with preprocessing and model training
+├── predictions.csv            # CSV file with predicted results
+└── README.md                  # Project documentation
+````
+## 🔹 License
+This project is licensed under the MIT License 
