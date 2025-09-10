@@ -3,7 +3,7 @@
 This project builds a model to classify messages as spam or ham (non-spam) using Natural Language Processing (NLP).
 The goal is to automatically detect unwanted messages, which is useful for email systems, messaging apps, and other communication platforms.
 
-##🔹 Model Performance
+## 🔹Model Performance
 
 The model was evaluated on a test set, and the main results are summarized below:
 
